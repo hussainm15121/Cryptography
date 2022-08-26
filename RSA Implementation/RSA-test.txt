@@ -1,0 +1,29 @@
+%%%=========================== Begining of the questions ================================
+\uplevel{\Large \textbf{Question answering}}
+\begin{questions}
+\question[10] The Euclidean algorithm is based on the following assertion. Given two integers $a$, $b$, ($a>b$),
+
+\begin{equation}\label{gcd}
+  \text{gcd}(a, b) = \text{gcd}(b, a \,\, \text{mod} \,\, b).
+\end{equation}
+Prove the assertion (\ref{gcd}) \textbf{mathematically}. (Note that proof by example is NOT appropriate here)
+
+\question[20] Assuming that Alice signed a document $m$ using the RSA signature scheme. (You should describe the RSA signature structure first with a diagram and explain the authentication principle). The signature is sent to Bob. Accidentally Bob found one message $m'$ ($m\neq m'$) such that $H(m)=H(m')$, where $H()$ is the hash function used in the signature scheme. Describe clearly how Bob can forge a signature of Alice with such $m'$. 
+
+\vspace{0.5in}
+\fullwidth{\Large \textbf{Programming}}
+\question[50] Implement the RSA algorithm (C/C++, Java, Python). The requirements are as follows:
+\begin{itemize}
+  \item Implement each component as a separate function, such as key schedule, prime test, the extended Euclidean algorithm, binary modular exponentiation, and so on.
+  \item Implement both encryption and decryption of RSA. Encryption takes a txt file as input and output another txt file containing ciphertext (use hexadecimal for easy readability). Decryption should recover the plaintext.
+  \item Your code should encrypt and decrypt standard keyboard characters, including letters, numbers, and symbols.
+  \item The prime numbers $p$ and $q$ should be larger than $2^{64}$. (you are allowed to use libraries to handle large numbers, such as BigInteger in Java)
+  \item The strategy of source coding (converting characters to integers in RSA) is up to you. You can encrypt one or more characters at a time, but make sure the constraint $m<n$ is satisfied.
+  \item Use the provided file \text{RSA-test.txt} to test your code.
+\end{itemize}
+After implementing your code, please \textbf{answer the following questions} in your report:
+\begin{parts}
+  \part[10] What are the lessons you learned, and difficulties you met, in the process of implementing RSA?
+  \part[10] Describe what you have done for source coding and decoding.
+\end{parts}
+\end{questions}
