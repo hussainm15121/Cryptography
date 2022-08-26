@@ -1,0 +1,89 @@
+\documentclass[12pt, addpoints]{exam}
+\usepackage[nodayofweek]{datetime}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{amssymb}
+
+%%% Logic symbols
+\newcommand{\imply}{\rightarrow}
+\newcommand{\bimply}{\leftrightarrow}
+
+\begin{document}
+
+%\pagestyle{headandfoot}
+%\firstpageheader{FCC}{Assignment 1}{\today}
+%\firstpageheadrule
+%%\runningheader{FCC}{Page \thepage\ of \numpages}{\today}
+%%\runningheadrule
+%\runningfooter{FCC - Assignment 1}{Page \thepage\ of \numpages}{\today}
+%\runningfootrule
+
+\center{\Large{\textbf{ISEC2000 Fundamental Concepts of Cryptography \\ \& ISEC5002 Introduction to Cryptography}} \\
+\Large{\textbf{Assignment 1, 2021}} \\
+\large{\textbf{@ Computing, Curtin University}} \\
+\vspace{1in}
+%\vspace{0.2in}
+%Name:\enspace\makebox[2in]{\hrulefill} \\
+%\vspace{0.2in}
+%Student ID:\enspace\makebox[2in]{\hrulefill} \\
+%\vspace{0.2in}
+%Tutorial Session:\enspace\makebox[2in]{\hrulefill}}
+%\vspace*{\fill}
+
+\begin{center}
+\fbox{\parbox{5.5in}{
+    \textbf{Weighting}:\\
+    This assignment contains \numquestions\ questions, for a total of \numpoints\ points, which weights for 25\% of the final mark.}}
+\end{center}
+
+\begin{center}
+\fbox{\parbox{5.5in}{
+    \textbf{Submission}: \\
+    You should submit \textbf{a single ZIP} file to Blackboard. Name the file as \texttt{<studentID>\char`_<name>\char`_assignment01.zip}. It should contain the code, report, and text files. Use the \texttt{Declaration\char`_of\char`_originality.pdf} as the cover page of your report. The due date is \textbf{18 April 2021 11:59 PM}.}}
+\end{center}
+
+\begin{center}
+\fbox{\parbox{5.5in}{
+    \textbf{Academic Integrity}: \\
+    This is an \textbf{individual} assignment so that any form of collaboration is not permitted. This is an \textbf{open-book} assignment so that you are allowed to use external materials, but make sure you properly \textbf{cite the references}. It is your responsibility to understand Curtin's Academic Misconduct Rules, for example, post assessment questions online and ask for answers is considered as contract cheating and not permitted.}}
+\end{center}
+
+\newpage
+
+%%%=========================== Begining of the questions ================================
+\uplevel{\Large \textbf{Attack a cipher}}
+\begin{questions}
+\question Please download the file \textit{cipher.txt} and try to decrypt it, assuming the plaintext is plain English that makes sense. You need to do the following.
+\begin{parts}
+  \part[10] Write a program (C/C++, Java, Python) to perform the letter frequency analysis attack.
+  \part[10] Write a program (C/C++, Java, Python) to perform the brute-force attack (exhaustive key search).
+  \part[10] Write a report to state
+    \begin{itemize}
+      \item What you have done in your code step-by-step
+      \item The substitution table obtained by letter frequency analysis
+      \item The key found by brute-force attack
+    \end{itemize}
+\end{parts}
+
+\vspace{0.5in}
+\fullwidth{\Large \textbf{Implement DES}}
+\question[30] Please implement the Data Encryption Standard (DES) algorithm (C/C++, Java, Python). The requirements are as follows:
+\begin{itemize}
+  \item Implement each component as a separate function, such as key schedule, permutation, SBox, f function, encryption, decryption.
+  \item Ask the user to input the key of any length, which means you need to do padding or chopping if necessary. Think about your padding strategy.
+  \item Implement both encryption and decryption of DES. Encryption takes a txt file as input and output another txt file containing ciphertext (use hexadecimal for easy readability). Decryption should recover the plaintext.
+  \item you code should encrypt and decrypt standard keyboard characters, including letters, numbers, and symbols.
+  \item Use the provided file \text{DES-test.txt} to test your code.
+\end{itemize}
+After implementing your code, please \textbf{answer the following questions} in your report:
+\begin{parts}
+  \part[10] What are the lessons you learned, and difficulties you met, in the process of implementing DES?
+  \part[10] (\textbf{ISEC2000}) What will happen if the key is initialised as all 0-bits? (\textbf{ISEC5002}) Which operations are confusion, which operations are diffusion, in DES? Explain your reasoning. (answer one of them based on your enrollment)
+\end{parts}
+
+\vspace{0.5in}
+\fullwidth{\Large \textbf{Lab demo}}
+\question[20] After the assignment due, you will perform a brief demonstration of your code, during the practical sessions. Each of you will be given around 5 minutes, so make sure your code is working and it is consistent with your submission.
+\end{questions}
+
+\end{document} 
